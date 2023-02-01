@@ -1,0 +1,30 @@
+plugins {
+    id "java-library"
+    id "org.jetbrains.kotlin.jvm"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+
+    //java basic library
+    api "cn.hutool:hutool-core:5.8.11"
+    api "cn.hutool:hutool-http:5.8.11"
+
+    //Gson
+    api "com.google.code.gson:gson:2.10.1"
+
+    //Html 解析器
+    api "org.jsoup:jsoup:1.15.3"
+
+    // 协程
+    //noinspection GradleDependency
+    api "org.jetbrains.kotlin:kotlin-stdlib:1.7.21"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
+}
