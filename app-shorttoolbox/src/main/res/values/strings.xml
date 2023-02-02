@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">短视频工具箱</string>
+    <string name="text_hint_main_share_text">分享链接</string>
+    <string name="text_main_parsing_short">分析</string>
+    <string name="text_main_download">下载到相册</string>
+    <string name="text_download_completed">下载成功!</string>
+</resources>

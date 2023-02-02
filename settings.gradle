@@ -10,7 +10,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" }
     }
 }
 rootProject.name = "tuotav-commerce-toolbox"
 include ':libshortvideohelper'
+include ':app-shorttoolbox'

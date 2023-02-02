@@ -1,5 +1,6 @@
 package com.tuotav.feature.shorthelper
 
+import cn.hutool.core.util.ObjectUtil
 import cn.hutool.core.util.RandomUtil
 import cn.hutool.core.util.ReUtil
 import cn.hutool.http.HttpRequest
@@ -51,6 +52,7 @@ class DouyinShortHackerService: ShortHackerService {
     override suspend fun parsing(shareText: String): ShortInformationViewObject? {
         // 视频短链
         val videoShortLink = ReUtil.get(PATTERN_SHARE_TEXT_GET_URL, shareText, 0)
+        if (ObjectUtil.isEmpty(videoShortLink)) throw IllegalArgumentException("分享链接不符合规范!")
         // 解析短视频链接获取视频标识
         val (videoId, _) = parsingVideoShortLinkGetVideoId(videoShortLink)
         // 解析视频详细信息
